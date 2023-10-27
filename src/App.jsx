@@ -1,18 +1,17 @@
-import { } from 'react'
+import appRouter from '../appRoutes'
 import './App.css'
 import Navbar from './components/navbar'
-import Sidebar from './components/sidebar'
 import Body from './components/Body'
+import { RouterProvider } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <div className=''>
-        <Sidebar />
+      <RouterProvider router={appRouter}>
         <Body />
-      </div>
+      </RouterProvider>
     </>
   )
 }

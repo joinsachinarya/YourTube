@@ -1,7 +1,12 @@
+import Sidebar from "./sidebar";
+import VideoList from "./VideoList";
 
 const Body = () => {
     return (
-        <div>Body</div>
+        <div className='flex'>
+            <Sidebar />
+            <VideoList />
+        </div>
     )
 }
 
