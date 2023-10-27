@@ -10,5 +10,4 @@ function ErrorComponent() {
         </div>
     )
 }
-
 export default ErrorComponent;
