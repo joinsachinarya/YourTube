@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { NOTIFICATIONS_ICON, USER_PROFILE_PIC, YOUTUBE_HOME_ICON } from "../constants/imageLinks"
 import { Link } from "react-router-dom"
-import HamburgerMenuIcon from "../assets/HamburgerMenuIcon.png"
+import HamburgerMenuIcon from "../assets/images/HamburgerMenuIcon.png"
 
 const Navbar = () => {
 
