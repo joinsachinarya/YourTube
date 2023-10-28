@@ -1,31 +1,22 @@
-import Body from './components/Body';
-import { Outlet, RouterProvider } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Navbar from './components/Navbar';
-// import appRouter from './appRoutes';
+import Body from './components/Body';
 
 function App() {
-
   return (
-    <>
+    <div style={{ fontFamily: "sans-serif" }}>
       <Navbar />
       <RouterProvider router={appRouter}>
         <Outlet />
       </RouterProvider>
-    </>
-  )
+    </div>
+  );
 }
-
-
-import { createBrowserRouter } from "react-router-dom";
-// import Navbar from "./components/Navbar";
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <Body />
   }
-])
-
-// export default appRouter;
-
-export default App
+]);
+export default App;
