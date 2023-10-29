@@ -1,22 +1,22 @@
-import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Body from './components/Body';
+import Body from "./components/Body";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Profile from "./components/Profile";
+import MyChannel from "./components/MyChannel";
 
 function App() {
   return (
-    <div style={{ fontFamily: "sans-serif" }}>
+    <>
       <Navbar />
-      <RouterProvider router={appRouter}>
-        <Outlet />
-      </RouterProvider>
-    </div>
+      <Routes>
+        <Route path="/" element={<Body />} />
+        <Route path="/profile" element={<Profile />} >
+          <Route path="my-channel" element={<MyChannel />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
-const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <Body />
-  }
-]);
+
 export default App;
