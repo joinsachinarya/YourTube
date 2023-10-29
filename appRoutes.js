@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "./src/App";
 import Body from "./src/components/Body";
+import App from "./src/App";
 import Profile from "./src/components/Profile";
 
-const appRouter = createBrowserRouter([
+const appRoutes = createBrowserRouter([
     {
         path: "/",
         element: <App />,
@@ -17,6 +17,7 @@ const appRouter = createBrowserRouter([
                 element: <Profile />
             }
         ]
-    }
+    },
 ]);
-export default appRouter;
+
+export default appRoutes;
