@@ -1,6 +1,13 @@
+import VideoCard from "./VideoCard"
+
 const VideoList = () => {
+
     return (
-        <div>VideoList</div>
+        <div className="flex flex-wrap">
+            {Array(10).fill("").map((item, index) => (
+                <VideoCard key={index} />
+            ))}
+        </div>
     )
 }
 
